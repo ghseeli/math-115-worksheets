@@ -2,9 +2,10 @@ Michigan Math 115 Calculus 1 Worksheets
 =======================================
 
 These worksheets are a compilation of problems I used for teaching Math 115: Calculus 1 at the University of Michigan. 
-The textbook for this class was *Calculus: Single Variable* by Hughes-Hallett, Gleason, McCallum, et al. 
-Many of the problems come from the textbook, or from former Math 115 exams, all of which can be found on the [Exam Shop](https://dhsp.math.lsa.umich.edu/examshops.html).
-In particular, almost none of the problems are written by me and I take no credit for them.
+- The textbook for this class was *Calculus: Single Variable* by Hughes-Hallett, Gleason, McCallum, et al. 
+- Many of the problems come from the textbook, or from former Math 115 exams, all of which can be found on the [Exam Shop](https://dhsp.math.lsa.umich.edu/examshops.html).
+- In particular, almost none of the problems are written by me and I take no credit for them.
+
 These problems were also intended to be a starting point for conversations between students working in groups.
 Because of this goal, many of these problems, especially after the first page, are intended to be challenging for an individual 
 Additionally, most worksheets are far too long for one 80 minute class period and the goal is not to have students finish the entire worksheet in class.
@@ -12,14 +13,8 @@ While many worksheets correspond to one 80 minute class period, there are except
 
 Shortcomings
 ------------
-One major shortcoming of these worksheets is that some of the problems involve way too much algebra or computation, and students can easily get lost in those details instead of focusing on the calculus concepts at hand.
-At the same time, students can easily lose points on exams if they get lost in the algebra of a problem, so it is important that they get practice.
-Thus, it is important to keep an eye on how a group is progressing and either helping them or having them move on if they get too lost in algebra details.
-
-
-Another major problem is that, prior to Fall 2020, students could use calculators on exams, so many old exam questions have somewhat trickier numerical calculations than problems after Fall 2020.
-I first drafted these worksheets in Fall 2021, when the bank of non-calculator exams was essentially non-existent.
-Now, of course, there exist many more exams, and so ultimately some of these computationally difficult problems could be replaced with more representative problems.
+- Some of the problems involve way too much algebra or computation, and students can easily get lost in those details instead of focusing on the calculus concepts at hand. At the same time, students can easily lose points on exams if they get lost in the algebra of a problem, so it is important that they get practice. Thus, it is important to keep an eye on how a group is progressing and either helping them or having them move on if they get too lost in algebra details.
+- Prior to Fall 2020, students could use calculators on exams, so many old exam questions have somewhat trickier numerical calculations than problems after Fall 2020. I first drafted these worksheets in Fall 2021, when the bank of non-calculator exams was essentially non-existent. Now, of course, there exist many more exams, and so ultimately some of these computationally difficult problems could be replaced with more representative problems.
 
 How to use
 ----------
