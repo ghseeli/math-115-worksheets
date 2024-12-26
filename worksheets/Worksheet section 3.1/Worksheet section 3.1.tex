@@ -1,0 +1,303 @@
+\documentclass[11pt]{exam}
+\usepackage[margin=1in]{geometry}
+\pagestyle{plain}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage{multicol}
+\usepackage[]{graphicx}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{subfigure}
+\usepackage[final]{pdfpages}
+
+\addtolength{\footskip}{2\baselineskip} % to lower the page numbers
+\title{\vspace{-0.5in} Math 115 \\ Worksheet Section 3.1}
+\date{}
+
+
+% \theoremstyle{definition}
+% \newtheorem{problem}{Problem}
+\renewcommand{\questionlabel}{\textbf{Problem~\thequestion.}}
+%\printanswers
+
+\begin{document}
+\maketitle
+\vspace{-0.75in}
+\begin{questions}
+\question Find the derivatives of the following functions
+  \begin{parts}
+  \part \(a(x)=x^{12}\)
+  \part \(b(x)=x^{3/4}\)
+  \part \(c(x)=x^{-3/4}\)
+  \part \(d(x)= \ln e^{ax}\) for \(a\) a constant
+  \part \(e(x) = \sqrt{x}(x+1)\)
+  \part \(f(x) = \frac{x^2+1}{x}\)
+  \part \(g(x) = 3x^2+\frac{12}{\sqrt{x}}-\frac{1}{x^2}\)
+  \end{parts}
+  \begin{solution}
+    \begin{enumerate}[(a)]
+    \item \(12x^{11}\)
+    \item \(\frac{3}{4}x^{-1/4}\)
+    \item \(-\frac{3}{4}x^{-7/4}\)
+    \item \(\ln e^{ax} = ax\) so \(d'(x) = a\)
+    \item \(e(x) = x^{3/2}+x^{1/2}\) so \(e'(x) = \frac{3}{2}x^{1/2}+\frac{1}{2}x^{-1/2}\)
+    \item \(f(x) = x+x^{-1}\) so \(f'(x) = 1-x^{-2}\)
+    \item \(g(x) = 3x^2+12x^{-1/2}-x^{-2}\) so \(g'(x) = 6x-6x^{-3/2}+2x^{-3}\)
+    \end{enumerate}
+  \end{solution}
+\question What is the derivative of \(f(x) = x^{\frac{1}{5}}\)? Is
+  \(f\) differentiable at \(x=0\)?
+  \begin{solution}
+    \(f'(x) = \frac{1}{5}x^{-4/5}\). \(f'(0)\) is undefined since we
+    can rewrite \(f'(x) = \frac{1}{5 x^{4/5}}\) and \(0^{4/5} = 0\) so
+    we are dividing by \(0\). Geometrically, this is realized by
+    noticing that the tangent line for \(x^{1/5}\) at \(x=0\) is vertical.
+  \end{solution}
+\question On what intervals is the graph of $g(x) = x^4-4x^3$ both decreasing and concave up?
+  \begin{solution}
+    We first compute \(g'(x) = 4x^3-12x^2\) and \(g''(x) =
+    12x^2-24x\). Then, we check
+    \begin{itemize}
+    \item \(g(x)\) is decreasing \(\iff g'(x) < 0\). Therefore,
+      \begin{align*}
+        4x^3-12x^2 < 0
+        & \implies 4x^2(x-3) < 0 \\
+        & \implies x < 3
+      \end{align*}
+    \item \(g(x)\) is concave up \(\iff g''(x) > 0\). Therefore,
+      \begin{align*}
+        12x^2-24x > 0
+        & \implies 12x(x-2) > 0 \\
+        & \implies x > 2 \text{ or } x<0
+      \end{align*}
+    \end{itemize}
+    Therefore, we have that \(g(x)\) is both decreasing and concave up
+    on the intervals \((-\infty,0)\) and \((2,3)\).
+  \end{solution}
+\question For what values of $x$ is the function $f(x)=x^5-5x$ both increasing and concave up?	
+  \begin{solution}
+    We first compute \(f'(x) = 5x^4-5\) and \(f''(x) = 20x^3\). Then,
+    we check
+    \begin{itemize}
+    \item \(f(x)\) is increasing \(\iff f'(x) > 0\). Therefore,
+      \begin{align*}
+        5x^4-5 > 0 & \implies 5x^4 > 5 \\
+                   & \implies x^4 > 1 \\
+        & \implies x < -1 \text{ or } x>1
+      \end{align*}
+    \item \(f(x)\) is concave up \(\iff f''(x) > 0\). Therefore,
+      \begin{align*}
+        20x^3 > 0 & \implies x^3 > 0\\
+        & \implies x > 0
+      \end{align*}
+    \end{itemize}
+    Thus, \(f(x)\) is both increasing and concave up on \((1,\infty)\).
+  \end{solution}
+\question The $n^{\text{th}}$ derivative of $f$, $f^{(n)}(x)$, is the result of differentiating $f(x)$ $n$ times. Consider the function $f(x) = x^7 + 5x^5 - 4x^3 + 6x - 7$.
+\begin{enumerate}[(a)]
+	\item Find the \emph{8th} derivative of $f(x)$. Think ahead!
+	\item Find the 7th derivative of $f(x)$.
+\end{enumerate}
+\begin{solution}
+  \begin{enumerate}[(a)]
+  \item \(f^{(8)}(x) = 0\)
+  \item \(f^{(7)}(x) = 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot
+    1\)
+  \end{enumerate}
+\end{solution}
+        
+\question
+  \begin{parts}
+  \part Find values for $a$ and $b$ so that the function $k$ is both
+    continuous and differentiable everywhere.
+
+$$k(x) = \left\{ \begin{array}{ll}
+                   ax+2 & x<0\\
+                   b(x-1)^2 & x\geq 0
+                 \end{array}
+               \right.$$
+     \part What is \(k'(x)\)?
+\end{parts}
+\begin{solution}
+  We know each piece of \(k(x)\) is continuous and differentiable
+  everywhere, so we need only check at \(x=0\). 
+  \begin{itemize}
+  \item (Continuity) For this we need \(a \cdot 0 + 2 =
+    b(0-1)^2\). This gives us \[
+      b=2
+    \]
+  \item (Differentiability) For this, we need the derivative to be
+    continuous. We know that \(k'(x) = a\) for \(x<0\) and \(k'(x) =
+    2bx-2b = 4x-4\) for \(x > 0\). Thus, we need these two pieces to
+    agree at \(x=0\). This gives us \[
+      a = 4 \cdot 0 - 4 = -4
+    \]
+  \end{itemize}
+  Thus, our final answer is \[
+    k'(x) =
+    \begin{cases}
+      -4 & x < 0 \\
+      4x-4 & x \geq 0
+    \end{cases}
+  \]
+\end{solution}
+\question Let \(p(x)\) be a seventh-degree polynomial with \(7\)
+  distinct zeros. How many zeros does \(p'(x)\) have? Hint: use MVT
+  to solve this.
+  \begin{solution}
+    If \(p(x)\) is a seventh-degree polynomial with \(7\) distinct
+    zeros, this means the graph of \(p(x)\) crosses the \(x\)-axis
+    \(7\) times. Consider any two consecutive zeros, say \(z_1\) and
+    \(z_2\). Then, since \(p(x)\) is a polynomial, it is continuous on
+    \([z_1,z_2]\) and differentiable on \((z_1,z_2)\). Thus, by the
+    Mean Value Theorem, there exists a \(c\) satisfying \(z_1 < c <
+    z_2\) such that \[
+      p'(c) = \frac{p(z_2)-p(z_1)}{z_2-z_1} = \frac{0-0}{z_2-z_1} = 0
+    \]
+    Thus, since there are \(6\) pairs of consecutive zeros for
+    \(p(x)\), we know \(p'(x)\) has \(6\) zeros.
+  \end{solution}
+\question At a time $t$ seconds after it is thrown up in the air, a tomato is at a height of $f(t)=-4.9 t^2 + 25 t + 3$ meters. 
+\begin{enumerate}[(a)]
+\item What is the average velocity of the tomato during the first $2$ seconds? Give units. 
+\item Find (exactly) the instantaneous velocity of the tomato at $t=2$. Give units. 
+\item What is the acceleration at $t=2$?
+\item How high does the tomato go?
+\item How long is the tomato in the air?
+\end{enumerate}
+\begin{solution}
+  \begin{enumerate}[(a)]
+  \item \[
+\frac{f(2)-f(0)}{2-0} = \frac{-4.9\cdot 4 + 25 \cdot 2 + 3 - 3}{2-0} =
+\frac{30.4}{2} = 15.2 \text{ meters/second}
+    \]
+  \item \(f'(t) = -9.8t+25\), so \(f'(2) = -19.6+25 = 5.4\) meters/second.
+  \item \(f''(t) = -9.8\) so the acceleration at \(t=2\) is \(-9.8\) meters/(second)\({}^2\)
+  \item If we graph \(f(t)\), we see it is a parabola with a max where
+    the tangent line has slope \(0\). Thus, we can solve \[
+      f'(t) = 0 \implies -9.8t+25 = 0 \implies t = \frac{25}{9.8}
+      \text{ seconds}
+    \]
+    Thus, the maximum height is \(f(\frac{25}{9.8})\) meters.
+  \item To solve this, we must check when \(f(t) = 0\) and pick the
+    positive solution. \[
+      f(t) = 0 \implies -4.9t^2+25t+3 = 0 \implies t = \frac{-25
+      \pm \sqrt{25^2-4(-4.9)(3)}}{-9.8} = \frac{25 \pm \sqrt{525 \pm 58.8}}{9.8}
+    \]
+    Thus, we pick the positive solution \(t =
+    \frac{25+\sqrt{583.8}}{9.8}\) seconds. (This is about 5.02 seconds.)
+  \end{enumerate}
+\end{solution}
+\pagebreak
+\question
+  \begin{enumerate}[(a)]
+  \item Find an equation of the line tangent to the graph of
+    \(f(x) = \sqrt{x}\) at the point \((4,2)\) on the graph.
+  \item For \(f(x) = \sqrt{x}\), what is \(\lim_{x\to \infty} f'(x)\)?
+    How is this consistent with the graph of \(f(x)\)?
+  \end{enumerate}
+  \begin{solution}
+    We first solve \(f'(x) = \frac{1}{2}x^{-1/2}\). Thus, the tangent
+    line has slope \(f'(4) = \frac{1}{2} (4)^{-1/2} = \frac{1}{4}\).
+    Using point-slope form, the tangent line is
+    given by \[
+      y = \frac{1}{4}(x-4)+2
+    \]
+    We compute that \(\lim_{x \to \infty} \frac{1}{2}x^{-1/2} =
+    0\). This is okay because \(f'(x)\) is positive for \(x > 0\) but
+    decreasing. 
+  \end{solution}
+\question (Fall 2018 Exam 2) Let \(A\) and \(B\) be constants and \[
+    k(x) =
+    \begin{cases}
+      3x+\frac{B}{x} & \text{for }0 < x < 1\\
+      Bx^2+Ax^3 & \text{for } 1 \leq x
+    \end{cases}
+  \]
+  Find the values of \(A\) and \(B\) that make the function \(k(x)\) differentiable on \((0, \infty)\). Show all your
+work to justify your answers. If there are no such values of \(A\) and \(B\), write none.
+\begin{solution}
+  See \href{https://dhsp.math.lsa.umich.edu/exams/115exam2/f18/s2.pdf}{https://dhsp.math.lsa.umich.edu/exams/115exam2/f18/s2.pdf}
+\end{solution}
+\question Suppose $p$ is a cubic polynomial function, meaning that $p(x) = a_3x^3 +a_2x^2 +a_1x+a_0$
+for some constants $a_0, a_1, a_2, a_3$, with $a_0 \neq 0$.
+\begin{enumerate}[(a)]
+\item Write expressions for $p(0)$, $p'(0)$, $p''(0)$ and $p'''(0)$ depending on $a_0, a_1, a_2$, and $a_3$.
+\item Find the formula for a cubic polynomial function $q$ that satisfies
+\[
+q(0) = 2, \quad q'(0) = -1, \quad q''(0) = 5, \quad q'''(0) = 4.
+\]
+\end{enumerate}
+\begin{solution}
+  Using our power rule for differentiating a polynomial, we can check
+  \begin{itemize}
+  \item \(p(0) = a_0\)
+  \item \(p'(x) = 3 a_3 x^2 + 2 a_2 x + a_1 \implies p'(0) = a_1\) 
+  \item \(p''(x) = 6 a_3 x + 2 a_2 \implies p''(0) = 2 a_2\)
+  \item \(p'''(x) = 6 a_3 \implies p'''(0) = 6 a_3\)
+  \end{itemize}
+  Thus, to find a cubic polynomial \(q\) satisfying the above
+  identities, we check
+  \begin{itemize}
+  \item \(a_0 = q(0) = 2\)
+  \item \(a_1 = q'(0) = -1\)
+  \item \(2 a_2 = q''(0) = 5 \implies a_2 = \frac{5}{2}\)
+  \item \(6 a_3 = q'''(0) = 4 \implies a_3 = \frac{2}{3}\)
+  \end{itemize}
+  Thus, \(q(x) = \frac{2}{3}x^3+\frac{5}{2}x^2-x+2\) satisfies the
+  desired properties.
+\end{solution}
+\question Assume that $f''$ and $g''$ exist and that $f$ and $g$ are concave up for all $x$. Are the following statements true or false? If a statement is true, explain how you know. If a statement is false, give a counterexample.
+\begin{enumerate}[(a)]
+	\item $f(x)+g(x)$ is concave up for all $x$.
+	\item $f(x)-g(x)$ cannot be concave up for all $x$.
+\end{enumerate}
+\begin{solution}
+  \begin{enumerate}[(a)]
+  \item True. The second derivative of \(h(x) = f(x)+g(x)\) is
+    \(h''(x) = f''(x)+g''(x)\) and both \(f''(x) > 0\) and \(g''(x) >
+    0\), so \(f''(x)+g''(x) = h''(x) > 0\).
+  \item False. It could be that \(f''(x) > g''(x)\) for all \(x\).
+  \end{enumerate}
+\end{solution}
+\question Let $f(x) = x^4 - 3x^2 + 1$.
+\begin{enumerate}[(a)]
+	\item Show that $f(x)$ is an even function.
+	\item Show that $f'(x)$ is an odd function.
+	\item Are all polynomials of even degree even functions?
+\end{enumerate}
+\begin{solution}
+  \begin{enumerate}[(a)]
+  \item \(f(-x) = (-x)^4-3(-x)^2+1 = x^4-3x^2+1 = f(x)\) 
+  \item \(f'(x) = 4 x^3 - 6 x\). Then, \(f'(-x) = 4(-x)^3-6(-x) =
+    -4x^3+6x = -f'(x)\)
+  \item No. Every monomial must be of even degree.
+  \end{enumerate}
+\end{solution}
+\question (Winter 2016 Exam 3) For constants $A$ and $B$, consider the function $h$ defined by
+\[
+h(t) = \begin{cases}
+(At)^2-48	& \text{if } t < 2\\
+Bt^3		& \text{if } t \geqslant 2.	
+\end{cases}
+\]
+Circle \underline{all} pairs of values of $A$ and $B$ such that $h(t)$ is differentiable.
+\begin{multicols}{3}
+    \begin{enumerate}[i.]
+        \item $A = 3, B = 3$
+        \item $A = 6, B = 12	$
+        \item $A = -6, B = 12$
+        \item $A = 0, B = 0$
+        \item $A = 18, B = 12$
+        \item \textsc{none of these}
+    \end{enumerate}
+\end{multicols}
+\begin{solution}
+  See part e in \href{https://dhsp.math.lsa.umich.edu/exams/115exam3/w16/s10.pdf}{https://dhsp.math.lsa.umich.edu/exams/115exam3/w16/s10.pdf}
+\end{solution}
+\end{questions}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

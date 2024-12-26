@@ -1,0 +1,177 @@
+\documentclass[11pt]{exam}
+\usepackage[margin=1in]{geometry}
+\pagestyle{plain}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage{multicol}
+\usepackage[]{graphicx}
+\usepackage{hyperref}
+
+\addtolength{\footskip}{2\baselineskip} % to lower the page numbers
+\title{\vspace{-0.5in} Math 115 \\ Worksheet Section 1.2}
+\date{}
+%\printanswers
+
+% \theoremstyle{definition}
+% \newtheorem{problem}{Problem}
+% \qformat{Problem \thequestion. \hfill} 
+\renewcommand{\questionlabel}{\textbf{Problem~\thequestion.}}
+
+\begin{document}
+\maketitle
+\vspace{-0.75in}
+\begin{questions}
+ \question (Warm-up). We say $P$ is an exponential function of $t$
+ with base $a$ if $P(t) =$\fillin[\(P_0 a^t\)].
+
+If \fillin[\(a > 1\)][1.5cm] then we have exponential growth; if \fillin[\(0<a<1\)] then we have exponential decay.
+
+Fill in the following table for \(P(t)\). \vskip.4ex
+\begin{tabular}{c|c}
+\(t\) & \(P(t)\) \\
+\hline
+0 & \\
+1 & \\
+2\\
+3\\
+\end{tabular}
+\begin{solution}
+ \begin{tabular}{c|c}
+\(t\) & \(P(t)\) \\
+\hline
+0 & \(P_0\) \\
+1 & \(P_0 a\)\\
+2 & \(P_0 a^2\)\\
+3 & \(P_0 a^3\)\\
+\end{tabular}
+ 
+\end{solution}
+\vskip.4ex
+Notice anything interesting about \(P(1)/P(0)\), \(P(2)/P(1)\), and
+\(P(3)/P(2)\)?
+\begin{solution}
+  They all are equal to \(a\).
+\end{solution}
+\vskip1ex
+We can rewrite this exponential function with base $e$, in the form
+\fillin[\(P(t) = P_0 e^{kt}\)].
+
+If \fillin[\(k>0\)][1.5cm] then we have exponential growth; if \fillin[\(k<0\)] then we have exponential decay.
+
+\vskip0.5cm
+\question Newton's law of heating says:
+\begin{itemize}
+	\item{
+		The difference between the temperature $\theta$ of an object at time $t$ and the temperature $\theta_s$ of its surroundings is an exponential function $H(t)$.
+	}
+	\item{
+		$H(t)$ has initial quantity the difference between the initial temperature $\theta_0$ of the object and the temperature of its surroundings.
+	}
+	\item{
+		$H(t)$ decays at continuous rate equal to the material
+                constant $k$ of the object. 
+	}
+\end{itemize}
+It is assumed that the surroundings of the object have constant temperature.
+\begin{parts}
+  \part Find an expression for $H(t)$. 
+  \begin{solution}
+     \(H(t) = (\theta_0-\theta_s)e^{-kt} \)
+  \end{solution}
+  \vspace{0.5in}
+  The one ring has initial
+  temperature $20^\circ$C when it is thrown into the molten core of
+  Mount Doom. the one ring melts after $2$ seconds. The one ring was
+  made from a gold-silver alloy with a melting point of $1015^\circ$C
+  and material constant $k=\ln(2/\sqrt{3})$.
+  \part Calculate the temperature of Mount Doom. 
+  \begin{solution}
+    We wish to know \(\theta_s\), the surrounding temperature of Mount
+    Doom. Let \(\theta(t)\) be the temperature of the one ring. We can use
+    Newton's law of heating to compute \(\theta_s\) since we know
+    \begin{itemize}
+    \item \(\theta(t) = \theta_s+H(t)\),
+    \item \(\theta_0 = 20^\circ\)C,
+    \item \(\theta(2) = 1015^\circ\)C,
+    \item \(k = \ln(2/\sqrt{3})\).
+    \end{itemize}
+    We combine this to get, \[
+      \begin{cases}
+        H(2) = \theta(2)-\theta_s\\
+        H(2) = (20-\theta_s)e^{-\ln(2/\sqrt{3})\cdot 2}
+      \end{cases}
+    \]
+    Then, we combine these equations to get
+    \begin{align*}
+      1015-\theta_s = (20-\theta_s)e^{-\ln(2/\sqrt{3})\cdot 2}
+      & \implies 1015-\theta_s = (20-\theta_s) \left(
+        \frac{\sqrt{3}}{2} \right)^2\\
+      & \implies 1015-\theta_s = (20-\theta_s) \frac{3}{4}\\
+      & \implies 1015-\theta_s = 15-\frac{3}{4}\theta_s\\
+      & \implies 1000 = \frac{1}{4}\theta_s\\
+      & \implies \theta_s = 4000
+    \end{align*}
+    Thus, Mount Doom is \(4000^\circ\)C.
+  \end{solution}
+\end{parts}
+\pagebreak
+\question (Fall 2011 Exam 1 Problem 4) 	A zombie plague has broken out in Ann Arbor. As a nurse in the University Hospital, you saw the person with the first case of the plague, patient zero.
+\begin{parts}
+ \part In order to keep track of the growing zombie population in Ann Arbor, you collected the following data: 
+\begin{center}
+\begin{tabular}{ | c | c | c | c | c | c | c | c | }
+\hline 
+ Days after patient zero & 0 & 6 & 9 & 12  \\ 
+ \hline
+ Number of zombies & 1 & 9 & 27 & 81 \\  
+ \hline
+ \end{tabular}
+\end{center}
+Would a linear function or an exponential function be the best model? Why?
+\part Write a function \(Z(t)\) of the appropriate type to model the growth of the zombie population at time $t$ measured in days after patient zero.
+\part The population of North America is approximately 530,000,000 people. Using your model, how long will it take until all but one person are infected?
+\end{parts}
+\begin{solution}
+  See \href{https://dhsp.math.lsa.umich.edu/exams/115exam1/f11/s3.pdf}{https://dhsp.math.lsa.umich.edu/exams/115exam1/f11/s3.pdf}
+\end{solution}
+\vspace{1in}
+\question (Winter 2018 Exam 1 Problem 9)
+A new video is released and a few hours later it goes viral. The number of views, in thousands, of the video \(t\) hours after it goes viral is given by the function $v(t)$. For the first 24 hours, the number of views of the video is increasing exponentially, reaching 50,000 views 12 hours after going viral and 120,000 views 24 hours after going viral. After that, during the second 24 hours, the video is gaining 10,000 views every 3 hours.
+\begin{enumerate}[(a)]
+\item Find a piecewise defined formula for $v(t)$ for $0 \leqslant t \leqslant 48$. Show all your work.
+
+\item Find the hourly percentage growth rate of \(v(t)\) during the
+  first 24 hours. Give only an exact form of your answer.
+\end{enumerate}
+\begin{solution}
+  See \href{https://dhsp.math.lsa.umich.edu/exams/115exam1/w18/s9.pdf}{https://dhsp.math.lsa.umich.edu/exams/115exam1/w18/s9.pdf}
+\end{solution}
+\vspace{1in}
+\question (Fall 2017 Exam 1 Problem 7)
+After testing different ingredients in their parents’ garages, Imran and Nicole have
+recently opened new organic peanut butter companies.
+\begin{parts}
+\part Two months after opening, Imran’s company, Chunky Munky, has
+  produced a total of 256 pounds of peanut butter. Imran thinks Chunky
+  Munky produces peanut butter at a constant rate of 690 pounds every
+  6 months. Assuming Imran is correct, write a formula for P(m), the
+  total amount of peanut butter, in pounds, that Chunky Munky will
+  have produced m months after opening.
+
+\part Nicole’s company, Lots O’ Crunch, has produced a total of 182
+  pounds of peanut butter two months after opening and a total 454
+  pounds of peanut butter five months after opening. Nicole thinks
+  that Lots O’ Crunch produces peanut butter exponentially. Assuming
+  Nicole is correct, write a formula for \(Q(x)\), the total amount of
+  peanut butter, in pounds, Lots O’ Crunch will have produced \(x\) months
+  after opening.
+\end{parts}
+\begin{solution}
+ See \href{https://dhsp.math.lsa.umich.edu/exams/115exam1/f17/s7.pdf}{https://dhsp.math.lsa.umich.edu/exams/115exam1/f17/s7.pdf}
+\end{solution}
+\end{questions}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
