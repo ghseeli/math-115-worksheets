@@ -1,7 +1,7 @@
 #!/bin/bash
 cd "worksheets"
-for DIR in $(find . -maxdepth 1 -type d -not -name '.' -print); do
-    echo "Moving to $DIR and compiling all .tex"
+for DIR in */; do
+    echo '"Moving to '"$DIR"' and compiling all .tex"'
     cd "$DIR"
     for FI in $(ls | grep --regexp="\.tex$"); do
         echo "$FI"
