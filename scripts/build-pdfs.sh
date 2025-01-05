@@ -3,7 +3,7 @@ cd "worksheets"
 for DIR in */; do
     echo '"Moving to '"$DIR"' and compiling all .tex"'
     cd "$DIR"
-    for FI in $(ls | grep --regexp="\.tex$"); do
+    for FI in *.tex; do
         echo "$FI"
         latexmk -pdf -interaction=nonstopmode "$FI" > output.txt 2>&1
         EXITCODE="$?"
