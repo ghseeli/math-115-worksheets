@@ -27,7 +27,7 @@ jobs:
     - name: Move PDFs to correct location
       run: |
         cd worksheets
-	mkdir docs/worksheets
+        mkdir docs/worksheets
         for DIR in $(ls -d */ | grep ''); do
           for PATH_REL_SRC in $(ls "$DIR"*.pdf | grep ''); do
             PATH_REL_DEST="docs/$PATH_REL_SRC"
