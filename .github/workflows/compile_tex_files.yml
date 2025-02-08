@@ -28,10 +28,12 @@ jobs:
       run: |
         mkdir docs/worksheets
         cd worksheets
-        for FI in $(find . -name '*.pdf' -not -path '*/Figures/*' | grep ''); do
-          echo "Moving $FI to docs/worksheets folder"
-          mv "$FI" docs/worksheets
-        done
+        find . -name '*.pdf' -not -path '*/Figures/*' -exec sh -c '
+          for FI do
+            echo "Moving $FI to docs/worksheets folder"
+            mv "$FI" docs/worksheets
+          done
+        ' exec-sh {} +
     - name: Edit webpages to include links for those pdfs
       run: |
         cd docs
