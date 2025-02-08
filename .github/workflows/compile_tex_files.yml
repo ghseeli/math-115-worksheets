@@ -27,7 +27,6 @@ jobs:
     - name: Move PDFs to correct location
       run: |
         mkdir docs/worksheets
-        cd worksheets
         find . -name '*.pdf' -not -path '*/Figures/*' -exec sh -c '
           for FI do
             echo "Moving $FI to docs/worksheets folder"
