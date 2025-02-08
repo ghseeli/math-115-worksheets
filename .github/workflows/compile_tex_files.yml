@@ -28,7 +28,7 @@ jobs:
       run: |
         mkdir docs/worksheets
         cd worksheets
-        for FI in $(find . -name '*.pdf' -not -path '*/Figures/*'); do
+        for FI in $(find . -name '*.pdf' -not -path '*/Figures/*' | grep ''); do
           echo "Moving $FI to docs/worksheets folder"
           mv "$FI" docs/worksheets
         done
