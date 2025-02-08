@@ -26,8 +26,9 @@ jobs:
         docker run --rm -v $PWD:/data my-latex-image
     - name: Move PDFs to correct location
       run: |
+        cd worksheets
+	mkdir docs/worksheets
         for DIR in $(ls -d */ | grep ''); do
-          mkdir "docs/$DIR"
           for PATH_REL_SRC in $(ls "$DIR"*.pdf | grep ''); do
             PATH_REL_DEST="docs/$PATH_REL_SRC"
             echo "Moving $PATH_REL_SRC to docs/$DIR folder"
