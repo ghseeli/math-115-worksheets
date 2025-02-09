@@ -42,7 +42,7 @@ jobs:
           OUTPUT_SECTION_TITLE="$3"
           OUTPUT_LINK_PREFIX="$4"
           printf "## $OUTPUT_SECTION_TITLE\n" >> "$OUTPUT_FILENAME"
-          for FNAME in $(ls "$DIR_NAME" | grep ''); do
+          for FNAME in *; do
             NAME="$OUTPUT_LINK_PREFIX""$FNAME"
             FPATH="$DIR_NAME/$FNAME"
             printf "[$NAME]($FPATH)  \n" >> "$OUTPUT_FILENAME" # Two spaces before \n tells Markdown to generate <br />
