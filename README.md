@@ -1,5 +1,6 @@
 Michigan Math 115 Calculus 1 Worksheets
 =======================================
+[PDFs of Worksheets](https://github.com/ghseeli/math-115-worksheets/tree/gh-pages/worksheets).
 
 These worksheets are a compilation of problems I used for teaching Math 115: Calculus 1 at the University of Michigan. 
 - The textbook for this class was *Calculus: Single Variable* by Hughes-Hallett, Gleason, McCallum, et al. 
