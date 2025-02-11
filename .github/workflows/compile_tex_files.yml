@@ -33,24 +33,6 @@ jobs:
             mv "$FI" docs/worksheets
           done
         ' exec-sh {} +
-    - name: Edit webpages to include links for those pdfs
-      run: |
-        cd docs
-        write_section_links() {
-          DIR_NAME="$1"
-          OUTPUT_FILENAME="$2"
-          OUTPUT_SECTION_TITLE="$3"
-          OUTPUT_LINK_PREFIX="$4"
-          printf "## $OUTPUT_SECTION_TITLE\n" >> "$OUTPUT_FILENAME"
-          for FNAME in *; do
-            NAME="$OUTPUT_LINK_PREFIX""$FNAME"
-            FPATH="$DIR_NAME/$FNAME"
-            printf "[$NAME]($FPATH)  \n" >> "$OUTPUT_FILENAME" # Two spaces before \n tells Markdown to generate <br />
-          done
-          printf "\n" >> "$OUTPUT_FILENAME"
-        }
-        write_section_links "worksheets" "worksheets.md" "Math 115 Worksheets" ""
-        cd ..
     - name: Deploy PDFs
       uses: peaceiris/actions-gh-pages@v3
       with:
