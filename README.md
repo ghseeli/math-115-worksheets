@@ -9,10 +9,10 @@ These worksheets are a compilation of problems I used for teaching Math 115: Cal
 
 These problems were also intended to be a starting point for conversations between students working in groups.
 Because of this goal, many of these problems, especially after the first page, are intended to be challenging for an individual student. 
-Additionally, most worksheets are far too long for one 80 minute class period and the goal is not to have students finish the entire worksheet in class.
+Additionally, most worksheets are far too long for one 80 minute class period and I did *not* expect students to finish the entire worksheet in class.
 My approach was to make sure students knew this and to provide them with the solutions after class.
 While many worksheets correspond to one 80 minute class period, there are exceptions; some worksheets are only half a class and others extend to 1.5 or 2 class periods.
-I am not providing a suggested schedule, since Math 115 coordinators provide a detailed schedule each semester baesd around the logistical details of the semester calendar.
+I am not providing a suggested schedule, since Math 115 coordinators provide a detailed schedule each semester based around the logistical details of the semester calendar.
 
 Shortcomings
 ------------
